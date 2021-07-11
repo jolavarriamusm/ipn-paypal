@@ -1,11 +1,6 @@
 import psycopg2
 import urllib.parse as urlparse
 
-import os
-from dotenv import load_dotenv
-load_dotenv()
-database_url = os.environ['DATABASE_URL']
-
 def get_connection_unsafe():
     return psycopg2.connect(
                 dbname='de43tdpr0fn1om',

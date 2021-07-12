@@ -28,7 +28,7 @@ def get_connection():
             )
 
 def add(data):
-    connection = get_connection()
+    connection = get_connection_unsafe()
     cursor = connection.cursor()
     query = "INSERT INTO paypal_data (data) VALUES ('" + data + "')"
     cursor.execute(query)

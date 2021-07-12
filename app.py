@@ -1,11 +1,12 @@
 from flask import Flask, request
 from db import add
+import urllib
 
 app = Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    add(request.json())
+    add(urllib.parse.parse_qsl(request.query_string))
     #cad=""
     #cad+="URL:"+request.url+"<br/>"
     #cad+="Método:"+request.method+"<br/>"

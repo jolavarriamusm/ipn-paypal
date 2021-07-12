@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print("hola") #add(request.data)
+    add(request.data)
     return "200"
 
 if __name__ == '__mcheain__':

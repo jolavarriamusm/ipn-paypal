@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    add(request.stream.decode("utf-8"))
+    add(request.stream.read().decode("utf-8"))
     #cad=""
     #cad+="URL:"+request.url+"<br/>"
     #cad+="Método:"+request.method+"<br/>"

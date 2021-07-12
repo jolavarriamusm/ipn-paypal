@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    add(urllib.parse.parse_qsl(request.query_string))
+    #add(urllib.parse.parse_qsl(request.query_string))
+    add(request.query_string.decode('utf-8'))
     #cad=""
     #cad+="URL:"+request.url+"<br/>"
     #cad+="Método:"+request.method+"<br/>"
